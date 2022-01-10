@@ -9,22 +9,37 @@
 
 <h1> My work out app </h1>
 
+
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6">
       <img src="../assets/IMG_0030.jpg" alt="" class="img-fluid w-100">
     </div>
+
     <div class="col-md-6">
       <div class="card">
         <div class="card-header">
           <h1> LOGIN FORM DUMMY</h1>
         </div>
         <div class="card-body">
-          <input type="text">
-          <button type="submit">SUBMIT</button>
+          
+          <form [formGroup]="loginForm" (ngSubmit)="login()"]>
+            <div class="form-group">
+              <label for="userName">Username</label>
+              <input type="text" class="form-control" id="userName" formControlName="userName" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="password">Username</label>
+              <input type="text" class="form-control" id="password" formControlName="password" placeholder="Enter password">
+            </div>
+            <button type="submit" >Submit</button>
+          </form>
+
         </div>
       </div>
     </div>
+    
   </div>
 </div>
 
